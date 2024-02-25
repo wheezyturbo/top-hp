@@ -138,7 +138,7 @@ main .cards{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr) );
     justify-content: center;
-    grid-gap:16px;
+    grid-gap:32px;
 }
 
 .card-img{
@@ -159,12 +159,48 @@ main .cards{
 
 
 footer{
-    margin:0 10%;
+  padding:54px 10%;
+  background:var(--secondary);
     display: grid;
     grid-template-columns:1fr 1.5fr;
 }
 
 .footer-img{
-    background:url('https://images.pexels.com/photos/2911527/pexels-photo-2911527.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    background:url('./terry.png');
     border-radius: 30px;
+    background-size:contain;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+
+
+@media screen and (max-width: 1200px) {
+ .hero{
+    flex-direction:column; 
+    justify-content:center;
+  }
+  .hero h3{
+    position:static;
+    text-align:center;
+    backdrop-filter:blur(10px);
+  }
+  .hero-img{
+    width:100%;
+    height:300px;
+    border-top-right-radius:30px;
+    border-bottom-left-radius:0px;
+  }
+  .hero-content{
+    margin-top:0;
+    padding-bottom:20px;
+  }
+  footer{
+    grid-template-columns:1fr;
+    grid-template-rows:1fr 1fr;
+  }
+  .footer-img{
+    grid-row:1/2;
+    background-size:contain;
+    background-position:center;
+  }
 }
